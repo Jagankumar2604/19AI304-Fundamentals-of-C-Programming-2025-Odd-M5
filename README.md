@@ -39,7 +39,43 @@
 ### Step 12: 
   Stop
 # Program:
+```
+#include <stdio.h>
+
+void swapValue(int a, int b)
+{
+    int t = a;
+    a = b;
+    b = t;
+    printf("After Call by Value: %d %d\n", a, b);
+}
+
+void swapRef(int *a, int *b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+int main()
+{
+    int x, y;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &x, &y);
+
+    swapValue(x, y);
+    printf("Original values: %d %d\n", x, y);
+
+    swapRef(&x, &y);
+    printf("After Call by Reference: %d %d\n", x, y);
+
+    return 0;
+}
+```
 # Output:
+<img width="323" height="133" alt="image" src="https://github.com/user-attachments/assets/af9d0430-87ac-4692-a8aa-ceb677fe5bff" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -77,7 +113,34 @@
 ### Step 10:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int fib(int n)
+{
+    if(n <= 1)
+        return n;
+    return fib(n - 1) + fib(n - 2);
+}
+
+int main()
+{
+    int n, i;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+
+    for(i = 0; i < n; i++)
+        printf("%d ", fib(i));
+
+    return 0;
+}
+```
 # Output:
+<img width="377" height="82" alt="image" src="https://github.com/user-attachments/assets/59445e0b-8497-4057-b07d-2c20185de5e7" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -119,7 +182,34 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 12:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+void printSeries(int low, int high)
+{
+    if(low > high)
+        return;
+
+    printf("%d ", low);
+    printSeries(low + 2, high);
+}
+
+int main()
+{
+    int low, high;
+
+    printf("Enter lower and upper limits: ");
+    scanf("%d%d", &low, &high);
+
+    printSeries(low, high);
+
+    return 0;
+}
+```
+
 # Output:
+<img width="356" height="73" alt="image" src="https://github.com/user-attachments/assets/d44597bf-4b0b-4c3e-bef6-5407a6ad02dd" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -161,7 +251,33 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int n, i, sum = 0, *a;
+
+    scanf("%d", &n);
+    a = (int *)calloc(n, sizeof(int));
+
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+        sum += a[i];
+    }
+
+    printf("Sum = %d", sum);
+
+    free(a);
+    return 0;
+}
+```
 # Output:
+<img width="173" height="281" alt="image" src="https://github.com/user-attachments/assets/219d3c6f-8193-404f-a804-69fe8edfc42d" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -197,6 +313,31 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+void display(int a[], int n)
+{
+    for(int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+}
+
+int main()
+{
+    int a[100], n;
+
+    scanf("%d", &n);
+
+    for(int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    display(a, n);
+
+    return 0;
+}
+```
 # Output:
+<img width="165" height="75" alt="image" src="https://github.com/user-attachments/assets/40680a34-ce9d-4a56-a726-639d3080232e" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
